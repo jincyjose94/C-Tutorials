@@ -10,8 +10,8 @@ How many storage units can you place on the map?
 
 int chargingStationCount (int** grid, int rowcount, int colCount){
     int count = 0;
-    for(int i=0; i<9; i++){
-        for(int j=0; j<19; j++){
+    for(int i=0; i<rowcount; i++){
+        for(int j=0; j<colCount; j++){
             // printf("%d ", grid[i][j]);
             if(grid[i][j]==1 && grid[i][j+1]==1&&grid[i+1][j]==1 && grid[i+1][j+1]==1){
                 count++;
